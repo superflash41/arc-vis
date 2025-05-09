@@ -8,13 +8,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
-          version: latest
+          bun-version: latest
 
       - name: Install & Build
         run: |
@@ -25,4 +29,6 @@ jobs:
       - name: Deploy to gh-pages
         run: |
           cd f
-          bunx gh-pages -d dist
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          bunx gh-pages -d dist -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
