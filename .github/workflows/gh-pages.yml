@@ -31,4 +31,4 @@ jobs:
           cd f
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          bunx gh-pages -d dist -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          bunx gh-pages -d dist -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
