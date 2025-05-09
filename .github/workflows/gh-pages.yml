@@ -1,0 +1,28 @@
+# .github/workflows/gh-pages.yml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          version: latest
+
+      - name: Install & Build
+        run: |
+          cd f
+          bun install
+          bun run build
+
+      - name: Deploy to gh-pages
+        run: |
+          cd f
+          bunx gh-pages -d dist
