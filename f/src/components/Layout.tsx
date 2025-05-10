@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { UserIcon } from "@heroicons/react/24/outline";
 
 interface LayoutProps {
     children: ReactNode;
@@ -32,7 +31,8 @@ export default function Layout({ children, infoText = "Visualization tool for th
             {/* Info Text Section */}
             <div className="bg-yellow-100 shadow-lg p-3 mb-6">
                 <div className="container mx-auto">
-                    <p className="text-gray-700">{infoText}</p>
+                    {/* make it move have some lateral padding */}
+                    <p className="text-gray-700 text-center text-sm">{infoText}</p>
                 </div>
             </div>
 
