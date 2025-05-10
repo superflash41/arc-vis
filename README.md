@@ -19,14 +19,14 @@ The goal of this repository is to allow:
 - Exploration of the input-output relationships
 - Understanding of the structure and complexity of different tasks
 
-## About the Dataset
+## About ARC
 The ARC dataset consists of 7,784 tasks, each with a unique grid-based input and output. The tasks are divided into two categories: *train* and *test*. The training set contains 4,000 tasks, while the test set contains 3,784 tasks. Each task is represented as a grid of colored squares, where the colors are represented by numbers from 0 to 9.
 
 More detail on the benchmark's official [repository](https://github.com/fchollet/ARC-AGI).
 
 ## Usage
 
-To use the application just go to this [website](https://superflash41.github.io/arc-vis/), and to run it locally clone the repository and use the following commands:
+To use the application just go to this [website](https://superflash41.github.io/arc-vis/), and to run it locally use the following commands:
 
 ```bash
 cd arc-vis/f
@@ -36,4 +36,4 @@ bun run dev
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
