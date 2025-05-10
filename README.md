@@ -1,4 +1,4 @@
-# ARC-VIS: Abstract Reasoning Corpus Visualization Tool
+# ARC-VIS: ARC Visualization Tool
 
 <!-- [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/superflash41/arc-vis) -->
 
