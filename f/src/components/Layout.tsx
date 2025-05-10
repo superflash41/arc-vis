@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { UserIcon } from "@heroicons/react/24/outline";
 
 interface LayoutProps {
     children: ReactNode;
@@ -11,7 +12,7 @@ export default function Layout({ children, infoText = "Visualization tool for th
             {/* Header */}
             <header className="bg-black text-white shadow-md">
                 <div className="container mx-auto flex justify-between items-center p-6">
-                    <a href="/" className="inline-block">
+                    <a href="/arc-vis/" className="inline-block">
                         <img
                             src={`${import.meta.env.BASE_URL}assets/arc-vis.png`}
                             alt="ARC-VIS Logo"
@@ -42,15 +43,17 @@ export default function Layout({ children, infoText = "Visualization tool for th
 
             {/* Footer */}
             <footer className="bg-[var(--arc-0)] text-white p-6 mt-8">
-                <div className="container mx-auto max-w-8xl">
+                <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="mb-4 md:mb-0">
-                            <h3 className="text-lg font-semibold mb-2">arc-vis</h3>
-                            <p className="text-sm opacity-75">ARC visualization and exploration tool</p>
+                            <h3 className="text-lg font-semibold mb-2">made by sn</h3>
+                            <p className="text-sm opacity-75">superflash41</p>
+                            <p className="text-sm opacity-25">PUCP</p>
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-2">References</h3>
-                            <ul className="text-sm opacity-75">
+                            {/* the links hsould be aligned to the right */}
+                            <ul className="text-sm opacity-75 text-right">
                                 <li className="mb-1"><a href="https://github.com/fchollet/ARC" className="hover:text-[var(--arc-4)]">ARC-AGI</a></li>
                                 {/* <li><a href="https://arxiv.org/abs/1911.01547" className="hover:text-[var(--arc-4)]">Original Paper</a></li> */}
                                 <li><a href="https://github.com/superflash41/arc-vis" className="hover:text-[var(--arc-4)]">ARC-VIS</a></li>
@@ -58,7 +61,7 @@ export default function Layout({ children, infoText = "Visualization tool for th
                         </div>
                     </div>
                     <div className="mt-6 pt-4 border-t border-white border-opacity-20 text-sm opacity-50 text-center">
-                        &copy; {new Date().getFullYear()} arc-vis
+                        &copy; {new Date().getFullYear()} ARC-VIS
                     </div>
                 </div>
             </footer >
